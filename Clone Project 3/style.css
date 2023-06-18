@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.accordion-container {
+	height: calc(100vh + 20px);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.accordion {
+	height: 50%;
+	width: 50%;
+}
+.accordion-title {
+	text-transform: capitalize;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.accordion-title h2 {
+	text-transform: capitalize;
+}
+
+.accordion-holder {
+	padding: 10px 0;
+	width: 100%;
+	height: auto;
+}
+
+.accordion-question {
+	border-bottom: 1.5px solid black;
+	padding-bottom: 5px;
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+}
+.accordion-question h3 {
+	text-transform: capitalize;
+	font-size: 1.2em;
+	width: 100%;
+	transition: 0.4s;
+}
+.accordion-question h3:hover {
+	transform: translate(5px, 0);
+}
+.accordion-question::after {
+	content: "+";
+
+	position: relative;
+	left: -5px;
+	font-size: 1.2em;
+}
+
+.accordion-answer {
+	height: 0;
+	padding-top: 10px;
+	overflow: hidden;
+	transition: 0.4s;
+}
+.accordion-answer p {
+	text-align: justify;
+}
+
+.accordion-holder.active .accordion-answer {
+	height: 100px;
+	transition: 0.4s;
+}
+.accordion-holder.active .accordion-question::after {
+	content: "-";
+}

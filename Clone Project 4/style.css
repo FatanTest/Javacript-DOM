@@ -1,0 +1,106 @@
+/* 
+yellow = #ffff3f
+red = #ff0831
+green = #00ff00
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:wght@500&family=Grandiflora+One&family=Kanit:wght@300&family=Noto+Sans+KR:wght@300&family=Playfair:wght@300&display=swap");
+/* 
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Bitter', serif;
+font-family: 'Grandiflora One', serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Playfair', serif;
+*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	display: flex;
+	position: absolute;
+	top: 10%;
+}
+.title h1 {
+	text-transform: uppercase;
+	font-family: "Bebas Neue", sans-serif;
+	letter-spacing: 5px;
+}
+
+.box-holder {
+	border: 1px solid black;
+	box-shadow: 10px 10px black;
+	width: 65%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#timer {
+	font-size: 2.5em;
+	font-weight: bolder;
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+#play,
+#restart,
+#stop {
+	border: 1.5px solid black;
+	margin: 10px 5px;
+	background-color: black;
+	cursor: pointer;
+	transition: 0.4s;
+}
+#play:hover {
+	background-color: #00ff00;
+}
+#restart:hover {
+	background-color: #ffff3f;
+}
+#stop:hover {
+	background-color: #ff0831;
+}
+#play:active {
+	background-color: #007e00;
+}
+#restart:active {
+	background-color: #909026;
+}
+#stop:active {
+	background-color: #7f0519;
+}
+#play-icon,
+#restart-icon,
+#stop-icon {
+	transition: 0.4s;
+	font-size: 2.4em;
+	font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+	padding: 5px;
+}
+#play-icon:hover,
+#restart-icon:hover,
+#stop-icon:hover {
+	color: black;
+}
+#play-icon {
+	color: #00ff00;
+}
+#restart-icon {
+	color: #ffff3f;
+}
+#stop-icon {
+	color: #ff0831;
+}
